@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Autos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="MJ AUTO SALES" class="logo-large" />
+  </div>
+
+  <header class="container">
+    <div class="brand">
+      <h1>Catálogo de Autos</h1>
+      <p class="subtitle">Selecciona la marca para ver las fotos</p>
+    </div>
+    <div class="actions">
+      <input id="search" type="search" placeholder="Buscar marca..." />
+      <button id="toggleTheme" aria-label="Cambiar tema">🌓</button>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <aside class="sidebar card">
+      <h2>Marcas</h2>
+      <nav id="brandList" class="brand-list"></nav>
+    </aside>
+
+    <section class="gallery card">
+      <div class="gallery-header">
+        <h2 id="currentBrand">Todas</h2>
+        <span id="count"></span>
+      </div>
+      <div id="grid" class="grid-images"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>Hecho para compartir fácilmente con tus clientes. Funciona en móvil y computadora.</small>
+  </footer>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close" aria-label="Cerrar">✕</button>
+    <img id="lightboxImg" alt="Vista ampliada" />
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
